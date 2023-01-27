@@ -1,0 +1,98 @@
+
+protocolo de capa de red 
+
+=> cabecera de IPv4
+
+* ocupa los primeros y bytes
+version, 
+internet header length
+differentiated services (DS), DSCP, ECN
+identificacion
+time-to-live
+protocol
+
+* ocupara los ultimos 2 bytes
+
+total length
+flag
+fragment offset
+header checksum
+
+* ocupa los 4 bytes
+
+source IP Address
+destination IP Address
+los datos
+
+
+-> IPv6
+
+* en los 90 se comenzo a buscar una solucion a las limitaciones del IPv4
+
+* ventajas del IPv6 sobre IPv6
+
+1) incremento del numero de direcciones, 32 bits a 128 bits 
+
+2) elimina el uso NAT
+
+3) la cabecera es mas simple 
+
+4) seguridad incorporada
+
+5) eficiencia en el numero de enrutamientos
+
+6) autoconfiguracion
+
+
+->  enrutamiento
+
+* los routers usan la tabla de enrutamiento para tomar desiciones 
+
+* tres tipos de destinos, uno mismo, dispositivo local, dispositivo remoto
+
+* tres tipos de rutas, directamente conectadas, rutas remotas, rutas por defecto
+
+// comandos de roter
+
+* router#show ip route // muestra la tabla de enrutamiento 
+* router#show version // muestra caracteristicas especificas del router
+
+
+-> routers
+
+* los routers son computadoras, requieren CPU, sistema operativo y memoria
+
+* el  tipo de router depende de la necesidad, sucursal, WAN, proveedor de servicio (no todos los router son iguales)
+
+* los router constan de:
+
+memoria RAM:
+
+running IOS (lo que esta ejecutando)
+
+routing table ARP Table
+running configuration file
+packet buffer
+
+NVRAM:
+
+startup configuration file
+
+Flash
+
+IOS Files
+
+ROM
+
+POST
+ROM Monitor Firmware (limitado por systema)
+
+
+
+* capa 3 del modelo OSI
+
+* IPv4 e IPv6, protocolos enrutables mas utilizados
+
+* IP es un protocolo sin conexion
+
+* IP es independiente del medio

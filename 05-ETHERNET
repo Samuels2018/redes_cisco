@@ -1,0 +1,86 @@
+
+=> Protocolo ETHERNET:
+
+* protocolo mas comun utilizado en la tecnologia LAN
+
+* definido por el estandar IEEE 802.2 y 802.3
+
+* anchos de banda desde 10Mb/s hasta los 100Gb/s
+
+* ETHERNET opera en la capa de enlace de datos (capa 2)
+
+* ETHERNET se basa en 2 subcapas Link local layer LLC y subcapa MAC
+
+* LLC maneja la comunicacion entre las capas superiores y las inferiores, es implementada en el software es independiente del hardware (802.2)
+
+* subcapa MAC implementada en el hardware, tipicamente en el NIC
+
+* la trama MAC mas pequenia es de 64 bytes y la maxima 1518 bytes
+
+* tramas menores a 64 bytes son llamadas runt frame
+
+* tramas mayores a 1500 bytes son llamadas jumbo
+
+* el dispositivo al recibir runt frame o jumbo los descarta
+
+
+=> direcciones MAC:
+
+* una direccion MAC ETHERNET es un numero binario de 48 bits expresado en 12 representaciones hexadecimales
+
+* los hexadecimales van de 0 a 9 y de la A hasta la F
+
+* los hexadecimales usualmente son representados por 0x, ejemplo: 0x2142
+
+* las direcciones MAC son usadas para identificar origen y destino en capa 2
+
+* las direcciones MAC son reglamentadas por la IEEE
+
+* las IEEE asigna al vendedor un codigo de 3 bytes llamado OUI, (identificador unico organizacional)
+
+
+=> Switches LAN
+
+* un switch capa 2 toma deciciones basado unicamente en las MACs (MAC origen y MAC destino)
+
+* al encender un switch tiene la tabla de direcciones MAC vacia
+
+* la tabla de direcciones MAC tambien se le conoce como "memoria direccionable de contenido" "CAM"
+
+* los switches examinan todas las tramas entrantes para conocer nueva informacion de direcciones MAC
+
+* si la direccion MAC de origen es desconocida se agrega a la tabla MAC y se relaciona con el puerto 
+
+* si la direccion MAC es de origen conocida se actualiza la tabla MAC con la informacion mas reciente 
+
+* por defecto los switches mantienen las entradas en la tabla MAC por 5 minutos
+
+* metodos de reenvio en los switches CISCO:
+
+* store and fordward, almacenar y reenvio, el switch recibe la trama completa y computa el chequeo de redundancia ciclica CRC, para garanriza
+que la trama que se envio es la que se recibio
+
+* cut-through, corte a traves, el switch reenvia la trama antes de recibir la trama entera, en el momento que el switch puede leer la MAC de destino este lo reenviara
+
+* full duplex (puede enviar y recibir al mismo tiempo)
+
+* half duplex ()
+
+* la mayoria de los dispositivos hoy en dia negocian las caracteristicas de ancho de banda
+
+* inconsistencia duplex produce coliciones (si un puerto es full duplex y el otro half duplex produce coliciones)
+
+* auto MDIX (operaciones con cableado)
+
+
+=> ARP (address resolution protocol)
+
+* doble direccion MAC (fisica) / IP (logica) 
+
+* destino en la misma red
+
+* destino en red diferente
+
+* ARP cache // almacena registros de enrutamiento
+
+* ARP spoofing, ataquante suplanta la direccion MAC del gateway
