@@ -1,0 +1,64 @@
+
+-> redes IPv4
+
+* estan definaidas por 32 bits
+
+* 4 octetos
+
+* expresados en decimal punteado
+
+* configuracion estatica o dinamica
+
+* y su entrega de mensajes puede ser: unicast ( de uno a uno) / multicast (de uno a un grupo) / broadcast (de uno a todos)
+
+* estan definidas en IPs publicas y IPs privadas estolo define la tabla "RFC 1918"
+
+tabla RFC 1918
+
+clase          rango publicas               rango privadas        mascara
+A        0.0.0.0 hasta 127.255.255.255        10.0.0.0        255.0.0.0 = /8
+
+B        128.0.0.0 hasta 191.255.255.255      172.16.0.0      255.0.0.0 = /16
+										    hasta 172.31.0.0
+
+C        192.0.0.0 hasta 223.255.255.255      192.168.0.0      255.0.0.0 = /24
+										    hasta 192.168.255.0
+
+D        224.0.0.0 hasta 239.255.255.255
+
+E        240.0.0.0 hasta 255.255.255.255
+
+estas IPs son administradas por una compania especifica dependiendo del continente en que te encuentres
+
+
+-> redes IPv6
+
+* estan definidas por 128 bits
+
+*  8 hextetos
+
+* expresado en hexadecimal
+
+* configuracion estatica o dinamica
+
+* y su entrega de mensajes puede ser: unicast ( de uno a uno) / multicast (de uno a un grupo) / anycast (de uno al mas cercano)
+
+* coexistencia entre las 2 ips
+	* dualstack -> la coexistencia entre las 2 ips al mismo tiempo en el router
+	* tunneling -> comunicar 2 IPv6 a traves de un tunel Ipv4
+	* translation -> traduccion de 2 IPv6 a traves de un nat64
+
+
+* direccionamiento
+	* global unicast, globalmente unica, enrutable en internet
+	* link-local, usada para cominicarse con otros dispositivos en el mismo enlace local
+	* unique local, usada para direccionamiento local con un sitio o entre un numero limitado de sitios
+
+-> verificacion de conectividad
+
+* se puede verificar conectividad con:
+	
+	* ICMP o PING
+	* 127.0.0.1 -> conectividad local
+	* traceroute -> comando para ver los pasos que sigue esta ruta 
+
