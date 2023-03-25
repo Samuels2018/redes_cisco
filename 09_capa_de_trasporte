@@ -1,0 +1,75 @@
+-> responsabilidad de la capa trasporte
+
+responsabilidad de la capa de trasporte
+* establecer una comunicacion temporal con los dipositivos
+* rastreo de las conversaciones entre origen y destino
+* segmentacio, divide los datos para un mejor manejo y trasporte 
+* identifica la aplicacion, a traves de un numero de puertos
+
+aplicacion FTP HTTP(WWW) SMTP(email) DNS TFTP
+			|     |        |          |    |
+Trasport    -----TCP--------------   ---UDP--
+					|                    |
+Internet            ----------IP-----------
+						|            |
+network access    LAN(connections)  WAN(connections)
+
+* TCP
+// se asegura que los segmentos que salgan del emiso son los que llegan al recptor y si se pierden se encargan de reenviarlos
+- protocolo confiable, asegura la entrega de los segmentos
+= numerar y rastrear segmentos
+- acuse de recibo
+- restrasmite el segmento si no recibe el acuse de recibo
+- control de flujo
+
+* UDP
+// se usa en video llamadas, voz sobre ip, streming de vido, comunicaciones en tiempo real
+- protocolo no confiable
+- entrega del mejor esfuerzo
+- sin acuse de recibo
+- cualquier segmento perdido no se reenvia
+
+-> numero de puertos
+
+* puerto de origen, son generados por el dispositivo, generados dinamicamente aleatorio
+* puerto de destino, indicael servicio quese esta solicitando
+
+-> TCP apreton de manos de 3 vias
+
+// se mantiene una session activa hasta que se finalice la comunicacion
+// envia un mensaje de sincronizacion con un numero de secuencia 100 (SEQ=100 CLT=SYN)
+// SYN received recibe el mensaje y lo envia (SEQ=300 AKC=101 CLT=SYN, ACK)
+// ACK response and SYN request
+// 101 es que recibio la informacion de la secuencia 100
+
+-> TCP ventana deslizable
+
+// se establece el tamanio de la ventana que es el tamanio de byts recibidos antres de enviar un acuse de recibo
+// osea que se pueden estar recibiendo 10000 byts hasta que una de las 2 partes haga un acuse de recibo
+- window size 10000, mms 1460
+// un ejemplo es cuando se descarga un archivo y se ve el incremento del numero de tiempo restante de la descarga se esta aumentando el tamanio de la ventana esa es la ventana deslizante
+// si la comunicacion no tiene perdidas en el camino se propone que haya un incremento en el tiempo
+
+-> UDP reensamblamiento
+
+- no orientado a la conexion 
+- se envian los datos y conforme se vallan recibiendo se trabajan
+ejemplo se envia dato1, dato2, dato3, dato4, dato5, dato6
+se reciben dato1, dato3, dato5, dato2, dato6
+- UDP no los ordena
+- si la aplicacion se requiere ordenar los datos la aplicacion lo hara ya que UDP no lo hara
+- asi como va llegando los segmento asi los recibira y no pedira que se reenvien si alguno haya quedado en el camino
+
+ejemplo que usan TCP
+FTP, HTTP, SMTP, Telnet,
+		|
+		TCP
+		|
+		IP
+
+ejemplos de UDP
+SNMP, TFTP, DNS, DHCP, VoIP, IPTV
+				|
+				UDP
+				|
+				IP

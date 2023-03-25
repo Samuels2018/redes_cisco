@@ -1,0 +1,31 @@
+// esta es la capa para los desarrolladores ya que tocan los datos
+
+aplicacion-presentacion-sesion
+
+* aplicacion, capa mas cercana al usuario final, usada para intercambiar datos entre los programas en ejecucion en los dispositivo de origen y destino
+// aplicacion seria el programa o la pagina web
+
+* presentacion, formato, compresion y encriptacion de los datos
+// en que formato esta el codigo: HTML, JAVA, c++ ...etc
+
+* sesion, crear y mantener los dialogos entre las aplicacion de origen y destino
+// mantener los dialogos cuando se inicia
+
+* protocolos mas conocidos 
+hypertext transfer protocol HTTP y HTTPS
+
+* protocolos de correo
+SMTP
+POP
+IMAP
+// cada uno son diferentes entre si
+
+* servicios de nombre de dominio DNS
+
+* protocolo de configuracion dinamica de host DHCP // administra de forma dinamica las ip a los usuarios
+
+* protocol de transferencia de archivo FTP
+
+// cada uno de estos protocolo titne un puerto asignado 
+
+* SMB server message block // transferiri o compartir el medio o espacio entre los dispositivos: una impresora, un celular ...etc

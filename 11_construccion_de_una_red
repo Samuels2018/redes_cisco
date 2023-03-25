@@ -1,0 +1,39 @@
+construccion de una red pequenia
+
+-> disenio de la red
+* costo
+* numero de puertos // siempre usar un switch con mas puerto de los requeridos
+* velocidad
+* dispositivos administrados
+* escalabilidad // que tan facil sera que nuestra red cresca
+
+-> direccionamiento
+
+* planeacion, rangos, puertos // mantener un orden en los puertos 
+* administracion de ips
+* Ips unicas
+* redundancia // por si un enlace falla que tenga una ruta de escape
+* confiabilidad
+* costos mas elevados // mejores equipos para que nuestra red sea la mejor
+
+-> redundancia
+-> crecimiento de la red
+
+* documentado
+* inventario 
+* presupuesto
+* analicis de trafico
+
+-> seguridad en la red
+
+* malware, virus, gusanos, troyanos
+* ataques de reconocimiento
+* ataques de acceso
+* ataques de degeneracion de servicios
+
+-> practicas basicas de seguridad
+
+* numero minimo de caracteres
+* desabilitar el login despues de cierto numero de intentos
+* desconectar por inactividad 
+* SSH

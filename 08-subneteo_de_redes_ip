@@ -1,0 +1,23 @@
+-> direccionamiento ipv4
+
+* la direccion ipv4 identifica dipositivos
+* los dispositivos utilizan binario
+* cada direccion ipv4 utiliza 32 bits desde 2^0 hasta 2^7
+* el uso de la mascara de red
+192.168.10 -> los primeros 3 bits le pertenecen a la red
+.1 -> le pertenece al host
+
+-> division de redes basado en un numero de subredes
+
+todas las subredes tendran la misma mascara 
+2^n = subred
+donde n es el numero de bits de host prestados, pasa de ser bits de host a red
+
+-> division de redes basado en el numero de host por subred
+
+si quieren 3 subredes
+* red A 100 host
+* red b 10 host
+* red c 40 host
+
+direccionamiento ipv6
