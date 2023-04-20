@@ -1,0 +1,22 @@
+
+-> disenio de un red lan
+
+* las redesde nuevas generacion deben ser seguras, confiables y altamente disponibles
+* deben soportar a la fuerza de trabajo globalizada
+* deban poder integrarse con los dipositivos heredados
+// todo esto quiere decir que al integrar nueva tecnologia a nuestra red ya previamente creada debe tener funcionamiento 
+
+-> convergancia en la red
+* la red debe ser convergente ya que integran sistemas de voz, video y datos
+* el beneficio es que un solo modio fisico se puede instalar y manejar
+// todo esto ya que antes se necesitaban un sistema para voz, video y datos pero en la actualidad solo se necesita 1
+
+-> modelo jerarquico
+
+core layer o capa de nucleo: en donde se encuentran los dispositivos que daran ya el acceso a intener
+
+distribucion layer o capa de distribucion: switches enrutables
+
+access layer o capa de acceso: los telefonos, pc, tabletaas, routers, televisores ...etc
+-> factor de forma
+-> dominios colision/broadcast

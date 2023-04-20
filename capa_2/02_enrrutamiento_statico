@@ -1,0 +1,17 @@
+implementacion de rutas estaticas
+
+                           enrutamiento dinamico                           enrutamiento estatico
+configuracion           | independiente del tamanio                     | aumenta con el tamanio
+cambios en la topologia | automaticamente se adapta                     | require intervencion
+escalamiento            | apropiado para topologias simples y complejas | apropiado para topoligias simples
+seguridad               | menos seguro                                  | mas seguro
+uso de recursos         | uso de CPU/memorias                           | no uso de recursos extraas
+previsibilidad          | rutas dependen de la topologia                | rutas son simples
+
+
+* aplicacion de rutas estaticas (cuando aplicar rutas estaticas)
+
+-> conectarse a una red especifica
+-> router de borde
+-> rutas sumarizadas
+-> ruta de respaldo

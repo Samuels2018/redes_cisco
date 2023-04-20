@@ -1,0 +1,54 @@
+* routers
+-> funcion de los router es enrrutar , conectar a redes remotas
+-> los routers son computadoras (CPU/OS/Memorias)
+
+RAM (memoria de acceso remoto)
+ROM (memoria de solo lectura)
+NVRAM (memoria de acceso aleatorio no volatil)
+
+RAM                         ROM                             NVRAM                  FLASH
+IOS en ejecucion      | instrucciones de inicio | archivo de configuracion de inicio |   IOS
+archivo de config     | programa de diagnostico |                                    | otros archivos de sistema
+en ejecucion
+tabla de enrutamiento | IOS limitado            |                                    |
+
+* los router escojen las mejore rutas
+getway: puerta de enlace
+debido a que los ruter tinen muchas formas de llegar a un mismo destino por eso es que el router tiene que tomar la mejor decision
+
+-> toma de deciciones con base a la tabla de enrutamiento 
+-> determina la mejor ruta y reenvia el paquete
+-> los routers se convierten normalmente en la puerta de enlace
+-> los dispositivos deben saber quien es su puerta de enlace
+
+* indicadores LED del router
+
+1 | GE 0/0 and GE 0/1 | S (Speed) | 1 blink + pause | Port operating at 10 Mb/s
+                                    2 blink + pause | Port operating at 100 Mb/s
+                                    3 blink + pause | Port operating at 1000 Mb/s
+                      | L (Link)  | Green           | Link is active
+                      	            Off               Link is inactive
+
+2 | Console           | EN        | Green           | Port Active
+                                    Off               Port inactive
+
+3 | USB               | EN        | Green           | Port active
+                                    Off               Port is inactive
+
+
+* distancias administrativas
+
+entre menos distancia administrativa la ruta es mas confiable en esto es que se basa el router para la toma de decisiones
+
+Route Source          | Administrative Distance
+Connected               0
+Static                  1
+EIGRP summary Route     5
+External BGP            20
+Internal EIGRP          90
+IGRP                    100
+OSPF                    110
+IS-IS                   115
+RIP                     120
+External EIGRP          170
+internal BGP            200

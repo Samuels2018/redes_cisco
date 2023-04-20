@@ -1,0 +1,30 @@
+* vista general de los protocolos de enrutamiento
+
+     |    protocolos de getway interior          | exterior
+     | vector distancia   | estado de enlace     | vector ruta
+IPV4 |   RIPV2 | EIGRP    |   OSPFv2 | IS-IS     | BGP-4
+IPv6 |  RIPng | EIGRP     |   OSPFv3 | IS-IS     | BGP-MP 
+				para IPv6              para IPV6
+
+* proposito y componentes principales 
+--> propositos
+-> descubrir redes remotas 
+-> mantener actualizada la tabla de enrutamiento
+-> escojer las mejores rutas
+-> adaptarse a los cambios de topologia
+
+--> componentes
+-> estructura de los datos, almacenados en la memoria RAM
+-> mensajes, descubrir e intercambiar informacion con los routers vecinos
+-> algoritmos, para facilitar el aprendisaje de nuevas rutas
+
+* RIPV2
+-> tipo: vector distancia (tiene forma de contabilizar cuanto tarda de llegar de una red a otra, cual es el proceso para llegar de una red a otra)
+
+-> algoritmo: bellman ford
+-> distancia administrativa: 120 // compara que tan confiable es este protocolo respecto a otro
+-> metrica: saltos (maximo 15)
+-> actualiza la tabla de enrutamiento cada 30 segundos
+
+
+* configuracion RIPV2
